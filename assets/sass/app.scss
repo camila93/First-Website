@@ -1,6 +1,7 @@
-$color: red;
-$color2: blue;
-
-.test-class {
-    background-color: $color;
-}
+@import "config/vars.scss";
+@import "config/mixins.scss";
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css");
+@import "base/base.scss";
+@import "styles/modules/header.scss";
+@import "styles/modules/first-block.scss";
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,600,600italic,700");
