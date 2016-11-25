@@ -1,22 +1,23 @@
-#nav{
+.nav {
     background-color: #282828;
     text-align: center;
     position: fixed;
     width: 100%;
 }
 
-#nav li{
-  display: inline-block;
+.nav li {
+    display: inline-block;
 }
 
-#nav a{
-  padding: 0.7em;
-  color: #FFF;
-  display: block;
-  font-size: 13px;
-  font-weight: 600;
-  @include media-q{
-    font-size: 17px;
-    padding: 1.2em;
-  }
+.nav a {
+    padding: 0.7em;
+    color: #FFF;
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+
+    @include media-q {
+        font-size: 17px;
+        padding: 1.2em;
+    }
 }
