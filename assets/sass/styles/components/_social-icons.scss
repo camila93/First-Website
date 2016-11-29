@@ -1,0 +1,82 @@
+$icons: (
+    'twitter': (
+        color: #2DAAE4,
+        unicode: '\f099'
+    ),
+    'facebook': (
+        color:#3C5A98,
+        unicode:'\f09a'
+    ),
+    'dribbble': (
+        color:#C4376B,
+        unicode:'\f17d'
+    ),
+    'linkedin': (
+        color:#006599,
+        unicode:'\f0e1'
+    ),
+    'tumblr': (
+        color:#51718A,
+        unicode:'\f173'
+    )
+    ,
+    'google-plus': (
+        color:#DA2713,
+        unicode:'\f0d5'
+    ),
+    'github': (
+        color:#FAFAFA,
+        unicode:'\f09b'
+    )
+);
+
+.social {
+    padding: 1em 0.5em 0 0.5em;
+    text-align: center;
+
+    &__item {
+        display: inline-block;
+        cursor: pointer;
+        margin: 0px 10px 5px 0px;
+    }
+
+    &__icon {
+        height: 50px;
+        width: 50px;
+        font-size: 25px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        color: #303030;
+        background-color: transparent;
+
+        border-radius: 7px;
+        border: solid 1px #000;
+    }
+
+    @each $key, $icon in $icons {
+
+        &__icon--#{$key} {
+
+            background-color: map-get($icon, color);
+
+            @include media-q {
+                background-image: $bkgImg;
+                background-color: transparent;
+                color: black;
+
+                &:hover {
+                    background-color: map-get($icon, color);
+                }
+            }
+
+            &:before {
+                content: map-get($icon, unicode);
+                font-family: 'FontAwesome';
+            }
+        }
+
+    }
+}

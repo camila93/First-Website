@@ -1,0 +1,107 @@
+.footer {
+    text-shadow: -1px -1px 0px #181818;
+    color: #999;
+
+    &__form {
+        margin: 0 0 1em 0;
+
+        &__header {
+            p {
+                font-size: 16px;
+                line-height: 150%;
+
+                @include media-q {
+                    font-size: 18px;
+                    line-height: 200%;
+                }
+            }
+        }
+
+        &__contato {
+
+            &__person {
+
+                @include media-q{
+                    display: flex;
+                }
+            }
+
+            .text-form{
+                padding: 0px 0 13px 0;
+
+                @include media-q {
+                    padding: 0px 0 20px 0;
+                }
+            }
+
+            .text_email {
+                @include media-q {
+                    margin-left: 20px;
+                    width: 50%;
+                }
+            }
+
+            .text_name {
+                @include media-q {
+                    width: 50%;
+                }
+            }
+
+            &__buttons {
+                @include media-q {
+                    margin: 0;
+                }
+
+                .btn_msg {
+
+                    @include media-q {
+                        margin-right: 10px;
+                        font-size: 20px;
+                    }
+                }
+                .btn_cls {
+                    background-image: $bkgImg;
+                    background-color: #444;
+                    box-shadow: inset 0px 0px 0px 1px #242424, inset 0px 2px 1px 0px rgba(255, 255, 255, 0.2);
+
+                    @include media-q {
+                        margin-left: 10px;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    &__copyright {
+        text-align: center;
+        margin-bottom: 50px;
+        color: #666;
+
+        @include media-q {
+            margin: 100px 0px 10px 0px;
+        }
+
+        li {
+            @include media-q{
+                display: inline-block;
+                border-left: solid 1px rgba(0, 0, 0, 0.5);
+                box-shadow: -1px 0px 0px 0px rgba(255, 255, 255, 0.1);
+                padding: 0px 20px 0px 20px;
+            }
+        }
+
+        li:first-child {
+            border: none;
+            box-shadow: none;
+        }
+    }
+}
+
+hr {
+    border: 0;
+    border-top: solid 1px #444;
+    border-top-color: rgba(0, 0, 0, 0.35);
+    margin: 2em 0 2em 0;
+    box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.1);
+}

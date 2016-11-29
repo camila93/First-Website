@@ -1,0 +1,55 @@
+.box {
+    margin: 0 0 40px 0;
+
+    @include media-q {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__item {
+        @include media-q {
+            display: flex;
+        }
+
+        &__block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15), 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
+            background-color: #FFF;
+            margin: 0 0 35px 0;
+
+            @include media-q {
+                margin: 1vw 1vw 1vw 1vw;
+            }
+
+            &__sub {
+                margin: 20px 10px 5px 10px;
+            }
+        }
+    }
+
+    &__footer {
+
+        @include media-q {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__header {
+
+            @include media-q {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+
+    &__fbtn {
+
+        @include media-q {
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
